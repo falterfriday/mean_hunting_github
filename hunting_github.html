@@ -1,0 +1,21 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<style>
+
+</style>
+  <body>
+    <button id="someButton" class=""><h1>Press it!</h1></button>
+    <script>
+      $(document).ready(function() {
+        $(document).on('click', 'button', function() {
+          $.get('https://api.github.com/users/falterfriday', function(res) {
+            $('p').append(res.name);
+          })
+        })
+      })
+    </script>
+    <p>
+
+    </p>
+  </body>
+</html>
